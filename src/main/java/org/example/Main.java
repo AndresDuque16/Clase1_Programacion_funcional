@@ -60,17 +60,11 @@ public class Main {
         System.out.println("**********------------**********");
         System.out.println("Respuesta Punto 3");
 
+        System.out.println("Para el articulo de valor de 10.000 el valor de Iva ingresado previamente de el 19% es  de: " + CalcularIva.calcularIva(10000));
+       
+        CalcularIva agregaIva = (precio, iva) -> precio*(iva/100);
 
-        System.out.println("Para el articulo de valor de 10.000 el valor de Iva con el 21% es  de: ");
-
-        IvaCalculo calcular = new IvaCalculo();
-
-        calcular.calculoIva(10000.0);
-
-
-        System.out.println("Para el articulo de valor de 10.000 el valor de Iva ingresado de el 19% es  de: ");
-        calcular.calculoIva(10000.0, 19.0);
-
+        System.out.println("Para el articulo de valor de 10.000 el valor de Iva ingresado en el momento de el 19% es  de:" + agregaIva.calcularIva(10000, 19));
 
 
 
